@@ -1,0 +1,7 @@
+GlassFractureTransition.sln
+Assembly-CSharp.csproj
+.idea/
+Library/
+ProjectSettings/
+obj/
+Temp/

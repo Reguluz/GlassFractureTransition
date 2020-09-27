@@ -1,0 +1,45 @@
+<PhysicsPlugin>
+    <ExporterSettings ExportPhysXScene="true" PhysXSceneFileFormat=".xml" ExportAPEXClothing="false" APEXClothingFileFormat=".apx" APEXClothingExportCtp="true" APEXClothingExportCtw="true" APEXReverseWinding="false" APEXClothingAddHulls="true" APEXClothingOmitMeshSubpartName="false" />
+    <GraphicsExport File="glassphysx.fbx" />
+    <PhysicsExport SDK="2.8.5" PhysXScene="glassphysx.xml" />
+    <ClothingTool SDK="unknown" CTP="" />
+    <SceneParameters>
+        <AnimationRange Start="0" End="100" FrameRate="30" FrameSubStepCount="3" />
+        <LengthUnit Type="centimeters" />
+        <GroundPlane Enabled="false" />
+        <Gravity Enabled="true" Value="0 0 -386.221" />
+        <Simulation SolverIteration="30" SimulationLoop="Continue Simulation" LastFrameMode="Continue Simulation" />
+    </SceneParameters>
+    <SceneObjects>
+        <RigidBody Attach="Box001_Part_1" Type="Kinematic" Position="13.0733 0 5.19107" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_2" Type="Kinematic" Position="5.94778 0 7.04845" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_3" Type="Kinematic" Position="-4.79448 0 5.15824" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_4" Type="Kinematic" Position="5.10802 0 8.83107" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_5" Type="Kinematic" Position="-11.149 0 9.56088" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_6" Type="Kinematic" Position="1.20722 0 9.51233" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_7" Type="Kinematic" Position="8.7868 0 3.6006" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_8" Type="Kinematic" Position="9.29068 0 14.9354" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_9" Type="Kinematic" Position="-9.04159 0 6.1885" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_10" Type="Kinematic" Position="7.40489 0 12.3079" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_11" Type="Kinematic" Position="14.0624 0 14.8193" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_12" Type="Kinematic" Position="-7.45626 0 1.89768" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_13" Type="Kinematic" Position="9.9525 0 17.1144" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_14" Type="Kinematic" Position="-2.88182 0 9.98086" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_15" Type="Kinematic" Position="-12.2249 0 12.6082" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_16" Type="Kinematic" Position="-7.3154 0 16.083" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_17" Type="Kinematic" Position="-1.75411 0 16.0859" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_18" Type="Kinematic" Position="8.15547 0 7.62717" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_19" Type="Kinematic" Position="-7.31903 0 11.8874" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_20" Type="Kinematic" Position="12.0324 0 14.4744" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_21" Type="Kinematic" Position="3.73496 0 15.1067" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_22" Type="Kinematic" Position="-1.52704 0 3.50751" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_23" Type="Kinematic" Position="-4.51657 0 11.5394" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_24" Type="Kinematic" Position="-12.4316 0 4.2497" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_25" Type="Kinematic" Position="13.1592 0 2.17822" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_26" Type="Kinematic" Position="-1.20173 0 12.9782" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_27" Type="Kinematic" Position="12.9675 0 9.33607" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_28" Type="Kinematic" Position="-12.8653 0 14.2111" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_29" Type="Kinematic" Position="4.14029 0 2.74848" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+        <RigidBody Attach="Box001_Part_30" Type="Kinematic" Position="-4.33411 0 16.0492" SwitchEnabled="false" SwitchAtFrame="0" Velocity="0 0 0" Spin="0 0 0" />
+    </SceneObjects>
+</PhysicsPlugin>
