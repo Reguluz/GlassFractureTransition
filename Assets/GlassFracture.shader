@@ -6,12 +6,18 @@
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags 
+        { 
+            "RenderType"="Transparent" 
+            "Queue" = "Transparent"
+        }
         LOD 100
 
         Pass
         {
+            Blend SrcAlpha OneMinusSrcAlpha
             CGPROGRAM
+            
             #pragma vertex vert
             #pragma fragment frag
             // make fog work
@@ -65,7 +71,8 @@
                 float4 ase_screenPos = float4( i.screenPos.xyz , i.screenPos.w + 0.00000000001 );
                 float4 ase_grabScreenPos = ASE_ComputeGrabScreenPos( ase_screenPos );
                 float4 ase_grabScreenPosNorm = ase_grabScreenPos / ase_grabScreenPos.w;
-                fixed4 col = tex2D(_ScreenCopyTexture, ase_grabScreenPosNorm.xy) - float4(0.1, 0, 0.1, 1);
+                fixed4 col = tex2D(_ScreenCopyTexture, ase_grabScreenPosNorm.xy);
+                col.xyz -= float3(0.1, 0.1, 0.1);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;
