@@ -5,3 +5,6 @@ Library/
 ProjectSettings/
 obj/
 Temp/
+Logs/Packages-Update.log
+Packages/packages-lock.json
+Packages/manifest.json

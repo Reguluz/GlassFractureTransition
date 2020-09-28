@@ -15,7 +15,7 @@
 
         Pass
         {
-            Blend SrcAlpha OneMinusSrcAlpha
+            //Blend SrcAlpha OneMinusSrcAlpha
             CGPROGRAM
             
             #pragma vertex vert
@@ -36,7 +36,7 @@
                 float2 uv : TEXCOORD0;
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
-                float4 screenPos : TEXCOORD1;
+                float4 screenPos : TEXCOORD2;
             };
 
             uniform sampler2D _ScreenCopyTexture;
@@ -72,7 +72,7 @@
                 float4 ase_grabScreenPos = ASE_ComputeGrabScreenPos( ase_screenPos );
                 float4 ase_grabScreenPosNorm = ase_grabScreenPos / ase_grabScreenPos.w;
                 fixed4 col = tex2D(_ScreenCopyTexture, ase_grabScreenPosNorm.xy);
-                col.xyz -= float3(0.1, 0.1, 0.1);
+                //col.xyz -= float3(0.3, 0.3, 0.3);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
                 return col;

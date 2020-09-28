@@ -44,8 +44,9 @@ public class TransitionController : MonoBehaviour
         {
             _commandBuffer.Blit(BuiltinRenderTextureType.CurrentActive, screencopy);
         }
-        _commandBuffer.Blit(screencopy, ID_ScreenCopy);
-        //_commandBuffer.Blit(src, dest);
+        Shader.SetGlobalTexture(ID_ScreenCopy, screencopy);
+        //_commandBuffer.Blit(screencopy, ID_ScreenCopy);
+        _commandBuffer.Blit(screencopy, dest);
     }
     
     private void OnDisable()
