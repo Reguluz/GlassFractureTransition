@@ -1479,7 +1479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Amplitude: 0.5
-  Frequence: 5
+  Frequence: 3
 --- !u!23 &1764315046
 MeshRenderer:
   m_ObjectHideFlags: 0
