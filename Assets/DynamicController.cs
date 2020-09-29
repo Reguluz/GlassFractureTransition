@@ -10,6 +10,7 @@ public class DynamicController : MonoBehaviour
     private Rigidbody[] breakblocks;
 
     private bool _iAnimation = false;
+    public Renderer[] Renderers;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +35,10 @@ public class DynamicController : MonoBehaviour
             VARIABLE.isKinematic = false;
         }
         _iAnimation = false;
+        for (int i = 0; i < Renderers.Length; i++)
+        {
+            Renderers[i].enabled = false;
+        }
+        
     }
 }
