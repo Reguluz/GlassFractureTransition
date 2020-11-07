@@ -68,10 +68,10 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 // sample the texture
-                float4 ase_screenPos = float4( i.screenPos.xyz , i.screenPos.w + 0.00000000001 );
-                float4 ase_grabScreenPos = ASE_ComputeGrabScreenPos( ase_screenPos );
-                float4 ase_grabScreenPosNorm = ase_grabScreenPos / ase_grabScreenPos.w;
-                fixed4 col = tex2D(_ScreenCopyTexture, ase_grabScreenPosNorm.xy);
+                // float4 ase_screenPos = float4( i.screenPos.xyz , i.screenPos.w + 0.00000000001 );
+                // float4 ase_grabScreenPos = ASE_ComputeGrabScreenPos( ase_screenPos );
+                // float4 ase_grabScreenPosNorm = ase_grabScreenPos / ase_grabScreenPos.w;
+                fixed4 col = tex2D(_ScreenCopyTexture, i.uv/*ase_grabScreenPosNorm.xy*/);
                 //col.xyz -= float3(0.3, 0.3, 0.3);
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);
