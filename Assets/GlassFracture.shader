@@ -3,6 +3,8 @@
     Properties
     {
         //_ScreenCopyTexture("grab tex", 2D) = "bump" {}
+        [HDR]_Color("Color", Color) = (1,1,1,1)
+        _Fresnel("Fresnel", Vector) = (0,0,0,0)
     }
     SubShader
     {
@@ -15,6 +17,7 @@
 
         Pass
         {
+            Blend SrcAlpha OneMinusSrcAlpha
             //Blend SrcAlpha OneMinusSrcAlpha
             CGPROGRAM
             
@@ -27,6 +30,7 @@
 
             struct appdata
             {
+                float3 normal : NORMAL;
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
             };
@@ -37,9 +41,11 @@
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
                 float4 screenPos : TEXCOORD2;
+                float3 normal : TEXCOORD3;
             };
 
             uniform sampler2D _ScreenCopyTexture;
+            float4 _Color;
 
             inline float4 ASE_ComputeGrabScreenPos( float4 pos )
 		    {
@@ -62,6 +68,7 @@
                 o.screenPos  = ComputeScreenPos(o.vertex);
                 o.uv = v.uv;
                 UNITY_TRANSFER_FOG(o,o.vertex);
+                o.normal = v.normal;
                 return o;
             }
 
@@ -74,7 +81,10 @@
                 fixed4 col = tex2D(_ScreenCopyTexture, i.uv/*ase_grabScreenPosNorm.xy*/);
                 //col.xyz -= float3(0.3, 0.3, 0.3);
                 // apply fog
+                float3 dots = dot(float3(0,0,1), i.normal) * _Color.rgb;
+                
                 UNITY_APPLY_FOG(i.fogCoord, col);
+                col.rgb = max(col.rgb, dots);
                 return col;
             }
             ENDCG
