@@ -10,12 +10,15 @@ public class DynamicController : MonoBehaviour
     private Rigidbody[] breakblocks;
 
     private bool _iAnimation = false;
-    public Renderer[] Renderers;
+
+    private new Animator _animator;
+    // public Renderer[] Renderers;
     // Start is called before the first frame update
     void Start()
     {
         breakblocks = ParentNode.GetComponentsInChildren<Rigidbody>();
         Debug.Log("BlockLength" + breakblocks.Length);
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -30,15 +33,16 @@ public class DynamicController : MonoBehaviour
 
     void Change()
     {
-        foreach (var VARIABLE in breakblocks)
-        {
-            VARIABLE.isKinematic = false;
-        }
+        // foreach (var VARIABLE in breakblocks)
+        // {
+        //     VARIABLE.isKinematic = false;
+        // }
         _iAnimation = false;
-        for (int i = 0; i < Renderers.Length; i++)
-        {
-            Renderers[i].enabled = false;
-        }
+        _animator.SetBool("Play", true);
+        // for (int i = 0; i < Renderers.Length; i++)
+        // {
+        //     Renderers[i].enabled = false;
+        // }
         
     }
 }

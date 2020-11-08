@@ -47,7 +47,6 @@ public class TransitionController : MonoBehaviour
         }
         if (!_bridge)
         {
-            Debug.Log("run "+ _bridge);
             int _srcW = _camera.pixelWidth;
             int _srcH = _camera.pixelHeight;
              _commandBuffer.ClearRenderTarget(true, true, Color.black);
