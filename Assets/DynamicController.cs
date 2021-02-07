@@ -6,6 +6,8 @@ public class DynamicController : MonoBehaviour
 {
     public bool StartButton;
     public GameObject ParentNode;
+    public GameObject[] toHide;
+    public GameObject[] toShow;
     
     private Rigidbody[] breakblocks;
 
@@ -39,6 +41,15 @@ public class DynamicController : MonoBehaviour
         // }
         _iAnimation = false;
         _animator.SetBool("Play", true);
+        foreach (var go in toHide)
+        {
+            go.SetActive(false);
+        }
+
+        foreach (var go in toShow)
+        {
+            go.SetActive(true);
+        }
         // for (int i = 0; i < Renderers.Length; i++)
         // {
         //     Renderers[i].enabled = false;
